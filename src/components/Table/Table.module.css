@@ -1,0 +1,21 @@
+.table {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.element{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+    border: 1px solid #fff;
+}
+.number {
+    display: flex;
+    justify-content: center;
+}
+
+.symbol {
+    display: flex;
+    justify-content: center;
+}
