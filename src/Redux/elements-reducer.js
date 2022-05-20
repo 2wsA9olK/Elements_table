@@ -5,7 +5,12 @@ const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING"
 
 let initialState = {
     isFetching: true,
-    elements: []
+    elements: [
+        {
+            "symbol": "Pole",
+            "number": 2
+        }
+    ]
 };
 
 const elementsReducer = (state = initialState, action) => {
@@ -33,10 +38,9 @@ export const requestElements = () => {
 
     return (dispatch) => {
         dispatch(toggleIsFetching(true));
-        
         elementsAPI.getElements().then(data => {
             dispatch(toggleIsFetching(false));
-            dispatch(setElements(data.elements));
+            dispatch(setElements(data.elements));           
         })
     }
 }
